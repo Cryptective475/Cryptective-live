@@ -1,0 +1,190 @@
+📦 FINAL REPLIT AGENT INSTRUCTION PACK  
+Cryptective.xyz – Production Launch Setup
+
+🚀 GOAL  
+Ensure Cryptective.xyz is 100% ready for public launch:
+- Fully responsive (mobile + desktop)
+- Professional and modern layout
+- All routes and components work
+- Payment flow works and is crypto-only
+- Live price charts and wallet integration
+- Notifications and auto-emails set up
+- Login/signup and data storage working
+- Multi-theme support (4 toggle modes)
+
+✅ TASK BREAKDOWN
+
+1. 📁 ROUTING & PAGE FLOW  
+Ensure all routes are working via React Router:
+
+Page              | Route  
+------------------|------------------  
+Home              | `/`  
+Services          | `/services`  
+About             | `/about`  
+Token Info        | `/token`  
+Blog              | `/blog`  
+Contact           | `/contact`  
+Login             | `/login`  
+Signup            | `/signup`  
+FAQs              | `/faqs`  
+
+Fix any broken buttons/links and ensure transitions are smooth.
+
+2. 💸 INVESTMENT TIERS  
+Break Services > Investments into:
+- Tier 1: $100 – $10,000  
+- Tier 2: $11,000 – $100,000  
+- Tier 3: $100,000+
+
+Each tier:
+- Shows wallet address + QR  
+- Requests full name, email, phone number, preferred contact  
+- Allows file upload (receipt)  
+- On submit: email all data to:
+  - davecarter645@gmail.com
+  - support@cryptective.xyz  
+- Auto-reply to user confirming receipt
+
+3. 🔐 RECOVERY SECTION  
+Improve form with:
+- Type of loss (Scam, Hack, Forex, etc.)
+- Estimated loss
+- Message: “You’ll be contacted by a representative.”
+
+Submission should:
+- Email both admin emails above
+- Send client auto-response
+
+4. 💳 PAYMENT WALLET DISPLAY  
+Generate QR codes for:
+
+- BTC: bc1q64ddhqdhj6k9dsdxzp732vypysnrlqgtxnkz3r  
+- ETH (ERC20): 0x187CF971622C9E47Cb587dbFd310Cc51288E273e  
+- USDT (ERC20): 0x187CF971622C9E47Cb587dbFd310Cc51288E273e  
+- USDT (TRC20): TK3VqoZz9ytane8mFQYZY2qkhEXpSFD1N8  
+- USDC (ERC20): 0x187CF971622C9E47Cb587dbFd310Cc51288E273e  
+- SOL: 5bNPoCXfv1HjBpd769arF4msVGgxjqEKB18ujZ8eZ1a4  
+- BNB: 0x187CF971622C9E47Cb587dbFd310Cc51288E273e
+
+5. 📬 EMAIL SETUP (ZOHO SMTP)  
+Send all emails using:
+
+- SMTP: smtp.zoho.com  
+- Port: 465 (SSL)  
+- From: support@cryptective.xyz  
+- App password: 7ZR6Bwq20biL  
+- Admin alerts go to: davecarter645@gmail.com  
+
+Trigger emails and auto-replies on:
+- Contact form  
+- Payment/receipt  
+- Recovery  
+- Login/signup  
+- Support messages  
+
+Auto-reply: “Thanks for contacting Cryptective. A representative will reach out shortly.”
+
+6. 👥 LOGIN & SIGNUP (SUPABASE)  
+Connect all login/signup logic to Supabase:
+
+- Supabase URL: https://fasntsksesoxoiezbraw.supabase.co  
+- Anon API Key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...  
+- DB Password: bkQgPXcBhsaSEUow  
+
+Store:
+- Full name  
+- Email  
+- Username  
+- Password (hashed)  
+- Signup date  
+
+Notify admin on new users.
+
+7. 🌐 WALLET CONNECT  
+Use Web3Modal or RainbowKit:
+- Connect MetaMask, Trust Wallet  
+- Show connected wallet address  
+
+(Optional: Pre-fill wallet into forms)
+
+8. 📊 LIVE PRICE CHARTS  
+Use CoinGecko API: CG-8vgSoYf5XjpW6t1DJiELegJm  
+- Show live BTC, ETH, USDT, BNB, SOL prices  
+- Use Chart.js or ApexCharts  
+- Embed in homepage and /token page  
+
+9. 🎨 THEMES  
+Add theme toggle for:
+- 🌕 Light  
+- 🌑 Dark  
+- 🌌 Night Black (deep black + stars)  
+- 💡 Dim White  
+
+Use Tailwind/DaisyUI  
+Store user theme in localStorage  
+Do NOT change layout structure
+
+10. 📱 RESPONSIVENESS  
+- Ensure mobile + tablet compatibility  
+- Add hamburger menu  
+- Allow desktop mode override  
+
+11. 📰 BLOG RSS FEED  
+Integrate blog feed from:
+
+- https://cointelegraph.com/rss  
+- https://decrypt.co/feed  
+- https://www.coindesk.com/arc/outboundfeeds/rss/  
+- https://bitcoinmagazine.com/.rss/full/  
+
+Parse and display:
+- Title, image, excerpt  
+- “Read More” button  
+- Show 6–10 latest  
+- Refresh every 30–60 minutes  
+
+12. 🌐 DEPLOYMENT  
+- Clean unused files, test all forms/pages  
+- Store keys in `.env`:
+  - Supabase URL / Key  
+  - SMTP credentials  
+  - CoinGecko Key  
+- Prepare for linking to: cryptective.xyz  
+- Provide DNS records if needed — domain is on Namecheap
+
+13. 🖼️ LOGO REQUIREMENTS  
+- Use final `logo.PNG` (case-sensitive)  
+- Show in:
+  - Navbar (desktop & mobile)
+  - Footer
+  - Favicon (if supported)
+- Logo must adapt to all 4 themes (especially Night Black)
+
+14. 🔒 CONTACT FORM PROTECTION  
+Add anti-bot protection:
+- Honeypot field  
+- Simple logic check  
+- Or basic free CAPTCHA (e.g. hCaptcha)
+
+15. 🔐 OPTIONAL: ADMIN PANEL  
+Create a basic `/admin` route (hidden or password-protected)  
+Display:
+- Latest users  
+- Form submissions (investment/recovery)  
+- Export to CSV (if possible)  
+- Requires login (or token check)
+
+16. 🧾 DEV NOTES / README  
+Leave a `README.md` or `dev_notes.txt` in root directory:
+- Supabase project details  
+- SMTP config  
+- CoinGecko API  
+- Wallet setup instructions  
+- Blog RSS source  
+
+📌 EMAIL SUMMARY  
+- Admin: davecarter645@gmail.com  
+- Support: support@cryptective.xyz (via Zoho Mail)
+
+Let me know once deployed. I’ll handle DNS setup on my end.
